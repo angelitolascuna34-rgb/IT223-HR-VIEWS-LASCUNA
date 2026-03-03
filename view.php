@@ -22,7 +22,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-    <h2>Employee Details View (HR Database)</h2>
+    <h2>Employee Details View</h2>
     <?php if ($result && $result->num_rows > 0): ?>
     <table>
         <tr>
@@ -48,8 +48,9 @@ $result = $conn->query($sql);
     </table>
     <p>Total: <?php echo $result->num_rows; ?> employees</p>
     <?php else: ?>
-    <p>No data found. Check if VIEW exists in hr database.</p>
+    <p>No data found. Check if VIEW exists.</p>
     <?php endif; ?>
     <?php $conn->close(); ?>
 </body>
 </html>
+
